@@ -25,7 +25,7 @@ const verifyAdmin = (req, res, next) => {
         if (req.user.isAdmin) {
             next();
         } else {
-            return next(createError(403, "You are not authorized!"));
+            return res.status(500).send("you are not authorized to do this action");
         }
     });
 };
