@@ -11,6 +11,7 @@ const { register, login, getuserbyid } = require('./controllers/auth.controller'
 
 const { verifyToken, verifyUser, verifyAdmin } = require('./middlewares/verifyToken');
 
+
 app.post("/register",
     body('email').isEmail().withMessage({
         message: 'Not an email',
