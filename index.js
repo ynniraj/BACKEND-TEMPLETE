@@ -21,11 +21,11 @@ app.post("/register",
 
 app.post("/login", login)
 
-app.get("/getuserbyid/:id", [verifyUser], getuserbyid)
+app.get("/getuserbyid/:id", [verifyAdmin], getuserbyid)
 
 
 
 app.listen(8080, async () => {
     await Connect()
-    console.log('Server is running on port 3000');
+    console.log('Server is running on port 8080');
 });

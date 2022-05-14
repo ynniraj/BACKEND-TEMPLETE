@@ -12,16 +12,16 @@ const verifyToken = (req, res, next) => {
     });
 };
 const verifyUser = (req, res, next) => {
-    verifyToken(req, res, next, () => {
+    verifyToken(req, res, () => {
         if (req.user.id === req.params.id || req.user.isAdmin) {
             next();
         } else {
-            return res.status(500).send("you are not authorized");
+            return res.status(500).send("you are not authorized bro");
         }
     });
 };
 const verifyAdmin = (req, res, next) => {
-    verifyToken(req, res, next, () => {
+    verifyToken(req, res, () => {
         if (req.user.isAdmin) {
             next();
         } else {
