@@ -1,9 +1,11 @@
 const express = require('express');
 const Connect = require('./confiq/db');
 const cookie = require('cookie-parser');
+const cors = require('cors');
 const { body } = require('express-validator');
 
 const app = express();
+app.use(cors())
 app.use(cookie())
 app.use(express.json())
 

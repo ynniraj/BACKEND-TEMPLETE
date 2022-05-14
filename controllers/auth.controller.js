@@ -44,7 +44,7 @@ const login = async (req, res) => {
                 secure: process.env.NODE_ENV === "production",
             })
             .status(200)
-            .send(user)
+            .send({ user, token })
 
     } catch (err) {
         res.status(500).send(err);
