@@ -23,7 +23,7 @@ app.post("/register",
 
 app.post("/login", login)
 
-app.get("/getuserbyid/:id", [verifyAdmin], getuserbyid)
+app.get("/getuserbyid/:id", [verifyUser], getuserbyid)
 
 
 
